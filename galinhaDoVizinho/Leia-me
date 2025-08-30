@@ -1,0 +1,32 @@
+Galinha do Vizinho
+
+Crie uma função que recebe um número como parametro para imprimir no console a letra da música com contagem de ovos da música "A Galinha do Vizinho".
+Galinha Pintadinha
+A galinha do vizinho bota ovo amarelinho
+
+Bota 1, bota 2
+
+A galinha do vizinho bota ovo amarelinho
+
+Bota 3, bota 4
+
+A galinha do vizinho bota ovo amarelinho
+
+Bota 5, bota mil!
+
+A galinha do vizinho bota ovo amarelinho
+
+Bota 6, bota 7
+
+A galinha do vizinho bota ovo amarelinho
+
+Bota 8, bota 9
+
+A galinha do vizinho bota ovo amarelinho
+
+Bota 10, bota mil!
+
+Mil, mil, mil, mil!
+
+
+Ao final chame a função para imprimir a letra completa com a contagem de 100 ovos.
