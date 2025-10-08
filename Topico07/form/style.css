@@ -1,0 +1,153 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+/* Remove margens, preenchimentos padrão e define box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fonte padrão */
+}
+
+/* ===== ESTILOS DO CORPO DA PÁGINA ===== */
+body {
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    padding: 20px; /* Espaçamento interno */
+    color: #333; /* Cor do texto principal */
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 600px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container na página */
+    background-color: white; /* Fundo branco */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espaçamento interno */
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+h1 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #2c3e50; /* Cor azul escuro */
+}
+
+/* ===== GRUPO DE FORMULÁRIO ===== */
+.form-group {
+    margin-bottom: 20px; /* Espaço entre os grupos de formulário */
+}
+
+/* ===== RÓTULOS DO FORMULÁRIO ===== */
+label {
+    display: block; /* Faz o label ocupar toda a linha */
+    margin-bottom: 8px; /* Espaço abaixo do label */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+}
+
+/* ===== CAMPO DE TEXTO DO FORMULÁRIO ===== */
+input[type="text"] {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 12px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+/* Efeito quando o campo de texto está focado */
+input[type="text"]:focus {
+    border-color: #3498db; /* Borda azul quando focado */
+    outline: none; /* Remove contorno padrão do navegador */
+}
+
+/* ===== BOTÃO DE ENVIO ===== */
+button[type="submit"] {
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remove borda padrão */
+    padding: 12px 20px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Muda cursor para pointer ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+    width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+/* Efeito hover no botão */
+button[type="submit"]:hover {
+    background-color: #2980b9; /* Azul mais escuro ao passar o mouse */
+}
+
+/* ===== SEÇÃO DA LISTA DE ITENS ===== */
+.item-list {
+    margin-top: 30px; /* Espaço acima da lista */
+}
+
+/* Título da lista de itens */
+.item-list h2 {
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    color: #2c3e50; /* Cor azul escuro */
+    border-bottom: 1px solid #eee; /* Linha inferior cinza muito clara */
+    padding-bottom: 10px; /* Espaço entre texto e linha */
+}
+
+/* ===== ITENS INDIVIDUAIS DA LISTA ===== */
+.item {
+    display: flex; /* Layout flexbox para alinhar conteúdo */
+    justify-content: space-between; /* Espaço entre texto e botão excluir */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 12px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Fundo cinza muito claro */
+    border-radius: 4px; /* Cantos arredondados */
+    margin-bottom: 10px; /* Espaço entre itens */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+/* Efeito hover nos itens */
+.item:hover {
+    background-color: #f0f0f0; /* Fundo um pouco mais escuro ao passar mouse */
+}
+
+/* Texto do item */
+.item-text {
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+}
+
+/* ===== LINK EXCLUIR ===== */
+.delete-link {
+    color: #e74c3c; /* Cor vermelha */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    font-weight: 600; /* Peso da fonte semi-negrito */
+    padding: 6px 12px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Transição suave para cor de fundo */
+}
+
+/* Efeito hover no link excluir */
+.delete-link:hover {
+    background-color: #e74c3c; /* Fundo vermelho ao passar mouse */
+    color: white; /* Texto branco ao passar mouse */
+}
+
+/* ===== MENSAGEM DE LISTA VAZIA ===== */
+.empty-message {
+    text-align: center; /* Centraliza o texto */
+    color: #7f8c8d; /* Cor cinza */
+    font-style: italic; /* Texto em itálico */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* ===== SEÇÃO DE INSTRUÇÕES ===== */
+.instructions {
+    background-color: #f8f9fa; /* Fundo cinza muito claro */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 4px; /* Cantos arredondados */
+    margin-bottom: 20px; /* Espaço abaixo das instruções */
+    font-size: 14px; /* Tamanho de fonte menor */
+    border-left: 4px solid #3498db; /* Borda lateral azul */
+}
+
+/* ===== ESTILO PARA A LISTA SEM MARCADORES ===== */
+#itemList {
+    list-style-type: none; /* Remove os marcadores (bolinhas) da lista */
+}

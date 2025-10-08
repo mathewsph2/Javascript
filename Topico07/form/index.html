@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens - Exercício de Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de Itens</h1>
+
+        <div class="instructions">
+            <p><strong>Instruções:</strong> Digite um item no campo abaixo e clique em CADASTRAR para adicioná-lo à
+                lista. Para remover um item, clique no link EXCLUIR ao lado dele.</p>
+        </div>
+
+        <!-- Formulário -->
+        <form id="itemForm">
+            <div class="form-group">
+                <label for="item">ITEM:</label>
+                <input type="text" id="item" name="item" placeholder="Digite o nome do item" required>
+            </div>
+            <button type="submit">CADASTRAR</button>
+        </form>
+
+        <!-- Lista de itens -->
+        <div class="item-list">
+            <h2>Itens Cadastrados</h2>
+            <ul id="itemList">
+                <!-- Itens serão adicionados aqui dinamicamente -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
