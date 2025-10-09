@@ -1,0 +1,24 @@
+const formulario = document.forms[0];
+const item = formulario.elements["texto"];
+const lista = document.createElement("ul");
+const script = document.querySelector("script");
+document.body.insertBefore(lista,script);
+
+formulario.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const itemLista = document.createElement("li");
+    itemLista.innerText = `${item.value} `;
+    const linkItem = document.createElement("a");
+    linkItem.innerText = "Excluir";
+    linkItem.setAttribute("href","#");
+    eventoExcluir(linkItem);
+    itemLista.appendChild(linkItem);
+    lista.appendChild(itemLista);    
+});
+
+function eventoExcluir(link) {
+    link.addEventListener("click",event => {
+        event.preventDefault();
+        link.parentElement.parentElement.removeChild(link.parentElement);        
+    });
+}
