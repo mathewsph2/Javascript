@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval Simplificado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #0066cc;
+        }
+        
+        .game-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(6, 50px);
+            grid-template-rows: repeat(6, 50px);
+            gap: 2px;
+        }
+
+        .header {
+            background-color: #0066cc;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .header:first-child {
+            background-color: #ffffff;
+        }
+        
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: #66b3ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .cell:hover {
+            background-color: #3399ff;
+        }
+        
+        .cell.bomb {
+            background-image: url('img/explosion.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .cell.miss {
+            background-image: url('img/splash.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .cell.hit {
+            background-image: url('img/pirate-ship.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .info-panel {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #0066cc;
+            border-radius: 5px;
+            background-color: #f0f8ff;
+            text-align: center;
+            min-width: 280px;
+        }
+        
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+            min-height: 24px;
+            text-align: center;
+        }
+
+        #restart-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #restart-button:hover {
+            background-color: #005bb5;
+        }
+        .form-name {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 300px;
+        }
+        .form-name input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Batalha Naval</h1>
+
+   
+    
+    <div class="game-container">
+            <h3>Encontre os navios e fuja das bombas!</h3>
+
+            <form class="form-name">
+            <input type="text" id="player-name" placeholder="Digite seu nome" name="player-name">
+            </form>
+
+            <div id="player-board" class="board">
+                <div class="header"></div>
+                <div class="header">A</div>
+                <div class="header">B</div>
+                <div class="header">C</div>
+                <div class="header">D</div>
+                <div class="header">E</div>
+                <div class="header">1</div>
+                <div class="cell" posicao="0"></div>
+                <div class="cell" posicao="1"></div>
+                <div class="cell" posicao="2"></div>
+                <div class="cell" posicao="3"></div>
+                <div class="cell" posicao="4"></div>
+                <div class="header">2</div>
+                <div class="cell" posicao="5"></div>
+                <div class="cell" posicao="6"></div>
+                <div class="cell" posicao="7"></div>
+                <div class="cell" posicao="8"></div>
+                <div class="cell" posicao="9"></div>
+                <div class="header">3</div>
+                <div class="cell" posicao="10"></div>
+                <div class="cell" posicao="11"></div>
+                <div class="cell" posicao="12"></div>
+                <div class="cell" posicao="13"></div>
+                <div class="cell" posicao="14"></div>
+                <div class="header">4</div>
+                <div class="cell" posicao="15"></div>
+                <div class="cell" posicao="16"></div>
+                <div class="cell" posicao="17"></div>
+                <div class="cell" posicao="18"></div>
+                <div class="cell" posicao="19"></div>
+                <div class="header">5</div>
+                <div class="cell" posicao="20"></div>
+                <div class="cell" posicao="21"></div>
+                <div class="cell" posicao="22"></div>
+                <div class="cell" posicao="23"></div>
+                <div class="cell" posicao="24"></div>
+            </div>
+    </div>
+    
+    
+    
+
+    <div class="info-panel">
+        <div>
+            Bombas restantes: <span id="player-bombs">3</span>
+        </div>
+        <div id="message"></div>
+        <button id="restart-button" >Recomeçar</button>
+    </div>
+
+    <script src="resposta.js"></script>
+</body>
+</html>
