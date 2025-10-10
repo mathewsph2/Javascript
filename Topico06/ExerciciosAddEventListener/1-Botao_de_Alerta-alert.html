@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão de alerta</title>
+</head>
+
+<body>
+
+  <!-- 1. Clique simples
+
+Crie um botão.
+Quando for clicado, deve mostrar um alert("Botão clicado!"). -->
+
+
+  <button id="emite-alerta">Botão de alerta</button>
+
+  <script>
+    const botao = document.getElementById('emite-alerta');
+
+    botao.addEventListener('click', () => {
+      const botao = alert("Alerta de clique!");
+    });
+
+
+  </script>
+</body>
+
+</html>

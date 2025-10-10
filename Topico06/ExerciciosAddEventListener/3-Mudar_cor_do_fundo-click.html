@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudar cor do fundo</title>
+</head>
+
+<body>
+
+  <!-- 3. Cor de fundo
+
+Ao clicar em um botão, mude a cor de fundo do body para uma cor aleatória. -->
+
+  <button id="mudarCor">Mudar cor do Fundo</button>
+
+  <script>
+    const botao = document.getElementById('mudarCor');
+    const cores = ['red', 'blue', 'green', 'orange', 'purple'];
+
+    botao.addEventListener('click', () => {
+      const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+      document.body.style.backgroundColor = corAleatoria;
+    });
+  </script>
+  
+</body>
+
+</html>

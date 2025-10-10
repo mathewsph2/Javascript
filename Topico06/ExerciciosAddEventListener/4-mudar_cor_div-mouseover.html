@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudar cor da DIV</title>
+</head>
+
+<body>
+
+
+  <!-- 4. Mouse over
+
+Crie uma <div> com fundo cinza.
+Quando o mouse passar por cima dela (mouseover), mude a cor para azul.
+Quando sair (mouseout), volte ao cinza. -->
+
+
+  <div style="width: 800px; height: 800px; background-color: gray; transition: background-color 0.3s;">
+    Passe o mouse sobre mim para mudar de cor!
+  </div>
+
+  <script>
+    const div = document.querySelector('div');
+    const cores = ['red', 'blue', 'green', 'orange', 'purple', 'yellow', 'pink', 'cyan'];
+
+    div.addEventListener('mouseover', () => {
+      const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+      // aqui não é document. 
+      div.style.backgroundColor = corAleatoria;
+    });
+
+    // Opcional: voltar ao cinza quando o mouse sair
+    div.addEventListener('mouseout', () => {
+      div.style.backgroundColor = 'gray';
+    });
+  </script>
+</body>
+
+</html>

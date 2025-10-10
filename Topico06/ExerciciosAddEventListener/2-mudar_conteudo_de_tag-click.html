@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudar texto</title>
+</head>
+
+<body>
+
+  <!-- 2. Mudando texto
+
+Quando o usuário clicar em um botão, o texto dentro de um <p> deve mudar para:
+
+“Você clicou no botão!” -->
+
+
+  <p>Texto original</p>
+
+
+  <button id="muda-texto">Botão de trocar texto</button>
+
+  
+  <script>
+    const botao = document.getElementById('muda-texto');
+    const paragrafo = document.querySelector('p');
+
+    botao.addEventListener('click', () => {
+      // Usar textContent ou innerHTML para mudar o texto
+      paragrafo.textContent = "Você clicou no botão!";
+
+    });
+  </script>
+
+
+</body>
+
+</html>
