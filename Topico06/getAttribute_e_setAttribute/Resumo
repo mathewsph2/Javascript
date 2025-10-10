@@ -9,3 +9,20 @@ Armazenando a src em uma variável:
 const imagem = document.querySelector('#foto');
 const endereco = imagem.getAttribute('src');
 console.log(endereco);  --> perfil.jpg
+
+
+setAttribute(): Adiciona ou altera um atributo em um elemento HTML.
+
+sintaxe: elemento.setAttribute(nomeDoAtributo, valor);
+
+Exemplo:
+const imagem = document.querySelector("#foto");
+
+// muda a imagem
+imagem.setAttribute("src", "nova-foto.jpg");
+
+// adiciona um atributo novo
+imagem.setAttribute("title", "Foto atualizada");
+
+Agora o HTML ficou assim:
+<img id="foto" src="nova-foto.jpg" alt="Minha foto" title="Foto atualizada">
