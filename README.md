@@ -1,9 +1,36 @@
 Tópico 01 - Introdução
+
 Tópico 02 - Tipos de dados
+
 Tópico 03 - Funções
+
 Tópico 04 - Objetos
+
 Tópico 05 - Escopo de Função
+
 Tópico 06 - DOM
+
+            - document.getElementById("id")
+
+
+            - document.querySelector("seletor")
+
+
+            - document.querySelectorAll("seletor")
+
+
+            - element.textContent = "novo texto"
+
+
+            - element.classList.add("classe")
+
+
+            - element.classList.remove("classe")
+
+
+            - element.classList.contains("classe")
+
+
 Tópico 07- Manipulação de Formulários
 
 
