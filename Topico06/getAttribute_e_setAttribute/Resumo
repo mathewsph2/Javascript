@@ -1,0 +1,11 @@
+getAtribute: Obtém o valor de um atributo em um elemento HTML.
+
+Sintaxe: elemento.getAttribute(nomeDoElemento);
+
+Exemplos de atributos: <img id="foto" src="perfil.jpg" alt="Minha foto">
+
+Exemplo de uso
+Armazenando a src em uma variável:
+const imagem = document.querySelector('#foto');
+const endereco = imagem.getAttribute('src');
+console.log(endereco);  --> perfil.jpg
