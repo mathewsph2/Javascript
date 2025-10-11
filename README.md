@@ -10,6 +10,8 @@ Tópico 05 - Escopo de Função
 
 Tópico 06 - DOM
 
+             ----------------------------------------------------------------------------------
+
             - document.getElementById("id")
 
 
@@ -27,10 +29,26 @@ Tópico 06 - DOM
 
             - element.classList.remove("classe")
 
-
+            
+            
             - element.classList.contains("classe")
+            
+            ----------------------------------------------------------------------------------
+            
+            - textContent
+            
+            
+            
+            - innerText 
+            
+            
+            
+            - innerHTML
 
+             ----------------------------------------------------------------------------------
 
+            
+            
 Tópico 07- Manipulação de Formulários
 
 
