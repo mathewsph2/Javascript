@@ -22,7 +22,7 @@ Tópico 06 - DOM
             - document.getElementById("id")
 
 
-            - document.querySelector("seletor")
+            - document.querySelector("seletor"); - O querySelector() é um dos métodos mais flexíveis, porque ele aceita qualquer seletor CSS válido como argumento.
 
 
             - document.querySelectorAll("seletor")
