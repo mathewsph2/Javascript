@@ -51,10 +51,21 @@ Tópico 06 - DOM
             
             
             - innerHTML
+            
 
              ----------------------------------------------------------------------------------
 
+             const todosItens = document.querySelectorAll('li');
             
+             forEach: 
+
+             todosItens.forEach(item => {
+            // item aqui se refere a cada <li> individualmente.
+            item.innerText = 'Novo Item'; 
+            })
+
+              ----------------------------------------------------------------------------------
+
             
 Tópico 07- Manipulação de Formulários
 
