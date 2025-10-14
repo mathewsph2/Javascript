@@ -10,6 +10,7 @@ Tópico 05 - Escopo de Função
 
 Tópico 06 - DOM
 
+
              ----------------------------------------------------------------------------------
              
             - Acesso ao DOM: Para selecionar um elemento, precisamos começar com o objeto document:
