@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos e Protótipos</title>
+</head>
+
+<body>
+
+
+    <script>
+/* Objeto Genérico x Instância
+
+        const aluno = {
+            nome: "Matheus",
+            matricula: 123456,
+            nascimento: "21-11-1990"
+        }
+
+        function criarAluno(nome, matricula, nascimento){
+            return{
+                nome: nome,
+                matricula: matricula,
+                nascimento: nascimento,
+                faleOi: function(){
+                    console.log('oi');
+                }
+            }
+        }
+
+       const aluno1 = criarAluno("Huguinho", 654321, "01-01-2000");
+       console.log(aluno1);
+
+       aluno1.faleOi();
+
+       const aluno2 = criarAluno("João", 654321, "01-01-2000");
+       console.log(aluno1);
+
+       aluno2.faleOi();
+    */
+
+
+        
+        function Person(first, last, age, gender, interests){
+            this.name = {
+                'first': first,
+                'last': last
+            };
+
+            this.age =age;
+            this.gender = gender;
+            this.interests = interests; 
+
+        }
+
+        /* Adicionado médotos ao protótipo: */
+        Person.prototype.sayHi = function(){
+            console.log('Hi');
+        }
+
+        var gildo = new Person('Gildo', 'Leonel', 39, 'male', ['games', 'ti', 'ui']);
+
+        console.log(Person.prototype);
+
+        console.log(Person.prototype.constructor);
+
+        console.log(gildo.name);
+
+        /* Criado huguinho usando gildo como modelo */
+        const huguinho = Object.create(gildo); 
+
+        huguinho.age = 23; 
+
+
+    </script>
+
+</body>
+
+</html>
