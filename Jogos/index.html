@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo de Dados</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Duelo de Dados</h1>
+        <!-- Seção dos Jogadores -->
+        <div class="players-container">
+            <!-- Jogador 1 -->
+            <div id="player1-section" class="player-section">
+                <form onsubmit="return false;">
+                    <label for="player1-name" class="sr-only">Nome do Jogador 1</label>
+                    <input type="text" id="player1-name" value="Jogador 1">
+                </form>
+                <div id="die1" class="die-container">
+                    <img src="./imgs/1.svg" width="100" height="100">
+                </div>
+                <p class="player-result">Resultado: <span id="player1-result">0</span></p>
+            </div>
+
+            <!-- Jogador 2 -->
+            <div id="player2-section" class="player-section">
+                <form onsubmit="return false;">
+                    <label for="player2-name" class="sr-only">Nome do Jogador 2</label>
+                    <input type="text" id="player2-name" value="Jogador 2">
+                </form>
+                <div id="die2" class="die-container">
+                    <img src="imgs/1.svg" width="100" height="100">
+                </div>
+                <p class="player-result">Resultado: <span id="player2-result">0</span></p>
+            </div>
+        </div>
+
+        <!-- Seção de Ação e Resultado -->
+        <div class="action-section">
+            <button id="roll-button">Rolar os Dados!</button>
+            <div id="winner-announcement" aria-live="polite">&nbsp;</div>
+        </div>
+
+        <!-- Seção da Lista de Vencedores -->
+        <div class="winners-section">
+            <h2> Lista de Vencedores </h2>
+            <ol id="winners-list">
+                <!-- Vencedores serão adicionados aqui -->
+            </ol>
+        </div>
+    </main>
+
+    <script src="./resposta.js"></script>
+
+</body>
+</html>
+

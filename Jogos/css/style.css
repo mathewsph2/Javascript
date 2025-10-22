@@ -1,0 +1,175 @@
+:root {
+    --cor-fundo: #f3f4f6;
+    --cor-surface: #ffffff;
+    --cor-texto: #1f2937;
+    --cor-primaria: #4f46e5;
+    --cor-primaria-hover: #4338ca;
+    --borda-radius: 0.75rem;
+    --sombra: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: var(--cor-surface);
+    padding: 2rem;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #e5e7eb;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Seção dos Jogadores */
+.players-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.player-section {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    border-radius: var(--borda-radius);
+}
+
+input[type="text"] {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #d1d5db;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.die-container {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.player-result {
+    font-size: 1.25rem;
+}
+
+.player-result span {
+    font-weight: bold;
+}
+
+/* Seção de Ação */
+.action-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#roll-button {
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#roll-button:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+#roll-button:active {
+    transform: scale(0.95);
+}
+
+#roll-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#winner-announcement {
+    margin-top: 1.5rem;
+    font-size: 1.875rem;
+    font-weight: bold;
+    height: 40px;
+}
+
+/* Lista de Vencedores */
+.winners-section {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: var(--borda-radius);
+}
+
+#winners-list {
+    list-style-type: decimal;
+    padding-left: 2rem;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
+    font-size: 1.125rem;
+}
+
+#winners-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+  .dado-animado {
+    animation: roll 1s linear infinite;
+  }
